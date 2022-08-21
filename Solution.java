@@ -13,9 +13,8 @@ public class Solution {
 
         char[] shiftedLetters = input.toCharArray();
         for (int i = 0; i < input.length(); ++i) {
-            int currentShift = (shiftedLetters[i] - 'a'
-                                + totalShifts[i] % ALPHABET_SIZE + ALPHABET_SIZE)
-                                % ALPHABET_SIZE;
+            int currentShift = (shiftedLetters[i] - 'a' + totalShifts[i] % ALPHABET_SIZE + ALPHABET_SIZE)
+                               % ALPHABET_SIZE;
             shiftedLetters[i] = (char) (currentShift + 'a');
             totalShifts[i + 1] += totalShifts[i];
         }
